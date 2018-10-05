@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script>
+        function funcSuc(data) {
+            data.s
+            window.alert($("myForm").serializeArray());
+            data.__get__("mm")
+            $("#information").html(data) //text(data)
+
+        }
+       $(document).ready (function () {
+           $("#load").bind("click", function(){
+               $.ajax ({
+                   type: "POST",
+                   data: ({name:"xxx"}),
+                   dataType: "html",
+                   success: funSuc
+               });
+           });
+       });
+    </script>
+</head>
+<body>
+    <p id="load" style="cursor: pointer"> Загрузить данные</p>
+    <div id="information"></div>
+</body>
+</html>
